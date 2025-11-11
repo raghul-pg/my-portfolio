@@ -16,7 +16,7 @@ const projects: Project[] = [
     emoji: "🌦️",
     description: "Developed a real-time weather forecasting web application built using Spring Boot and the OpenWeather API. It displays current weather details and forecasts based on city search with a responsive UI.",
     techStack: "SpringBoot | OpenWeather API",
-    githubUrl: "https://github.com/raghul-pg/weather-app-springboot",
+    githubUrl: "https://github.com/raghul-pg/weather-app-springboot-",
     liveUrl: "https://aeronow.onrender.com"
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
     emoji: "💼",
     description: "Developed a portfolio website showcasing projects and skills. Built using React with Vite for fast performance and Tailwind CSS for minimal UI. Includes sections for contact info, resume, and project links.",
     techStack: "React|Vite|Tailwind CSS",
-    githubUrl: "https://github.com/raghul-pg/portfolio"
+    githubUrl: "https://github.com/raghul-pg/my-portfolio"
   }
 ];
 
