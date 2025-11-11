@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: transparent;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  /* Use normal block flow so page containers and Tailwind utility classes control layout */
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Animated background styles (subtle gradient + soft floating dots) */
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.animated-bg .gradient-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #92cdf4 0%, #bfdbfe 35%, #93c5fd 70%, #40a9da 100%);
+  background-size: 200% 200%;
+  opacity: 0.95;
+  mix-blend-mode: normal;
+  filter: blur(0.5px);
+  animation: bg-gradient-shift 18s ease-in-out infinite;
+}
+
+@keyframes bg-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg .dots-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.animated-bg .bg-dot {
+  transform-origin: center;
+  animation-name: dot-float, dot-fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes dot-float {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-10px) translateX(6px) scale(1.02); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
+}
+
+@keyframes dot-fade {
+  0% { opacity: 0.02; }
+  50% { opacity: 0.06; }
+  100% { opacity: 0.02; }
+}
+
+/* Reduce animation intensity for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animated-bg .gradient-layer { animation: none; }
+  .animated-bg .bg-dot { animation: none; opacity: 0.03 !important; }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #0c2340;
+    background-color: #e0f2fe;
+  }
+  a:hover {
+    color: #0284c7;
+  }
+  button {
+    background-color: #bfdbfe;
+  }
+}
