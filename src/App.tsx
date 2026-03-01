@@ -14,7 +14,7 @@ export default function App() {
   return (
     <Router>
       <ThemeProvider>
-        <div className="min-h-screen bg-sky-50 dark:bg-gray-900 transition-colors pt-16">
+        <div className="min-h-screen transition-colors pt-16">
           <AnimatedBackground />
           <Navbar />
           <AnimatePresence mode="wait">
