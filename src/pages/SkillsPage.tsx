@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import {
-  FaJava, FaNodeJs, FaGitAlt, FaDatabase, FaReact,
+  FaJava, FaNodeJs, FaGitAlt, FaDatabase,
 } from 'react-icons/fa';
 import {
-  SiSpringboot, SiMongodb, SiMysql, SiPostgresql,
+  SiSpringboot, SiMongodb, SiMysql,
   SiPostman, SiJsonwebtokens, SiExpress, SiJavascript,
-  SiHtml5, SiCss3, SiGithub,
+  SiGithub,
 } from 'react-icons/si';
 
 interface Skill {
